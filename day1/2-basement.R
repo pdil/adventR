@@ -12,3 +12,5 @@ input_vec <- as.numeric(input_vec)
 cumulative_floor <- cumsum(input_vec)
 # find first element where cumulative sum is negative
 which(cumulative_floor < 0)[1]
+
+# 1795
