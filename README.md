@@ -3,5 +3,6 @@
 
 * [day 1](https://github.com/pdil/adventR/tree/master/day1)
 * [day 2](https://github.com/pdil/adventR/tree/master/day2)
-* day 3
+* [day 3](https://github.com/pdil/adventR/tree/master/day3)
+* day 4
 * ...
