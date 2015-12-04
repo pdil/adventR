@@ -4,6 +4,7 @@
 library(animation)
 library(ggplot2)
 library(scales)
+library(grid)
 
 combined$group <- factor(c(rep("Santa", length(santa_coords$x)), rep("Robo-Santa", length(robo_coords$x))))
 
@@ -12,14 +13,17 @@ ggplot(data = combined) +
              alpha = 1/3, size = 1) +
   scale_colour_manual(values = c("#00BFC4", "#F8766D")) +
   guides(colour = guide_legend(override.aes = list(size = 5, alpha = 1))) +
-  theme(panel.background = element_rect(fill = "black"),
+  theme(panel.background = element_rect(fill = "black", colour = NA),
+        plot.background = element_rect(fill = "black", colour = NA),
+        panel.grid = element_blank(), panel.border = element_blank(),
         panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         axis.title.x = element_blank(), axis.title.y = element_blank(),
         axis.text.x = element_blank(), axis.text.y = element_blank(),
         axis.ticks.x = element_blank(), axis.ticks.y = element_blank(),
         legend.position = c(1, 0), legend.justification = c(1, 0),
         legend.title = element_blank(), legend.background = element_rect(fill = alpha("black", 0)),
-        legend.key = element_blank(), legend.text = element_text(colour = "white", size = 12))
+        legend.key = element_blank(), legend.text = element_text(colour = "white", size = 12),
+        plot.margin = unit(c(0, 0, 0, 0), "mm"))
 
 ggsave("paths.png", height = 7, width = 7)
 
