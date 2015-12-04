@@ -2,7 +2,7 @@
 library(readr)
 library(dplyr)
 # read input from file
-input <- read_lines("input")
+input <- read_lines("input.txt")
 # separate each line into three separate numbers, convert to data frame
 input_split <- input %>% lapply(strsplit, split = "x") %>% unlist %>% 
   matrix(ncol = 3, byrow = TRUE) %>% as.data.frame(stringsAsFactors = FALSE)

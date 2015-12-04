@@ -1,7 +1,7 @@
 
 library(readr)
 # read input file
-input <- read_file("input")
+input <- read_file("input.txt")
 # remove all '('
 input_edit <- gsub("[(]", "", input)
 # compare before and after length (i.e. 'up' moves)

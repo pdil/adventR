@@ -1,7 +1,7 @@
 
 library(readr)
 # read input file
-input <- read_file("input")
+input <- read_file("input.txt")
 # split string into individual elements
 input_vec <- substring(input, 1:nchar(input), 1:nchar(input))
 # replace '(' with 1 and ')' with -1
