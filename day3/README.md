@@ -1,4 +1,4 @@
 ### --- Day 3: Perfectly Spherical Houses in a Vacuum ---
 http://adventofcode.com/day/3
 
-![Paths](./paths.png)
+<img src="paths.png" alt="Paths" width="700px">
