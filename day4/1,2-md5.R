@@ -16,5 +16,5 @@ which(substr(hashes2, 1, 6) == "000000")
 # 1038736
 
 # One liners:
-which(substr(sapply(paste0(input, 1:5e5), digest, algo = "md5", serialize = FALSE), 1, 5) == "00000")
-which(substr(sapply(paste0(input, 1e6:2e6), digest, algo = "md5", serialize = FALSE), 1, 6) == "000000")
+which(substr(sapply(paste0(input, 1:5e5), digest, serialize = FALSE), 1, 5) == "00000")
+which(substr(sapply(paste0(input, 1e6:2e6), digest, serialize = FALSE), 1, 6) == "000000") + 1e6
