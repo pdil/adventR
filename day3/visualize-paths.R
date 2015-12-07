@@ -11,6 +11,7 @@ combined$group <- factor(c(rep("Santa", length(santa_coords$x)), rep("Robo-Santa
 ggplot(data = combined) + 
   geom_point(aes(x = x, y = y, colour = group), 
              alpha = 1/3, size = 1) +
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0)) +
   scale_colour_manual(values = c("#00BFC4", "#F8766D")) +
   guides(colour = guide_legend(override.aes = list(size = 5, alpha = 1))) +
   theme(panel.background = element_rect(fill = "black", colour = NA),
