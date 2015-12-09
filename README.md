@@ -7,9 +7,9 @@
 * [day 4](https://github.com/pdil/adventR/tree/master/day4)
 * [day 5](https://github.com/pdil/adventR/tree/master/day5)
 * [day 6](https://github.com/pdil/adventR/tree/master/day6)
-* day 7
-* day 8
-* day 9 
+* [day 7](https://github.com/pdil/adventR/tree/master/day7)
+* [day 8](https://github.com/pdil/adventR/tree/master/day8)
+* [day 9](https://github.com/pdil/adventR/tree/master/day9)
 * day 10
 * day 11
 * day 12
