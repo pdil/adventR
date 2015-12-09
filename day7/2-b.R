@@ -26,6 +26,8 @@ while (TRUE) {
     } else if (length(lines[[index]]) == 3) {
       if (lines[[index]][3] == "a") {
         tryCatch({assign(lines[[index]][3], get(lines[[index]][1]))}, error = function(e) e)
+      } else if (lines[[index]][3] == "b") {
+        b <- 956
       } else {
         assign(lines[[index]][3], as.numeric(lines[[index]][1]))
       }
@@ -47,7 +49,7 @@ while (TRUE) {
     } else {
       test2 <- "ok"
     }
-  
+    
     if (!inherits(test1, "error") & !inherits(test2, "error")) {
       if (op == "AND") {
         if (class(p1) == "numeric") {
@@ -82,7 +84,7 @@ while (TRUE) {
       }, error = function(e) e)
     }
   }
-
+  
   
   if (length(ls()) - 9 >= 339) {
     print(a)
@@ -90,4 +92,4 @@ while (TRUE) {
   }
 }
 
-# 956
+# 40149
