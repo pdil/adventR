@@ -28,5 +28,5 @@
 * day 24
 * day 25
 
-\# of completions per day GLM fit:
+\# of completions per day GLM fit:<br>
 <img src="https://raw.githubusercontent.com/pdil/adventR/master/glm.png" width="600px">
