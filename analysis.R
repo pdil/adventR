@@ -1,20 +1,21 @@
 
 library(ggplot2)
+library(MASS)
 library(grid)
 
 df <- data.frame(
-  day = 1:9,
-  gold = c(15765, 11531, 9303, 8139, 6478, 5438, 3316, 2931, 1938)
+  day = 1:8,
+  gold = c(15791, 11556, 9325, 8159, 6500, 5453, 3327, 2952)
 )
 
-glm_fit <- glm(gold ~ day, data = df, family = poisson(link = "log"))
+glm_fit <- glm.nb(gold ~ day, data = df)
 glm_fit
 
 coefs <- coef(glm_fit)
 
 new_df <- data.frame(
   day = 1:25,
-  gold = exp(coefs[[1]] + coefs[[2]] * (1:25))
+  gold = predict(glm_fit, newdata = data.frame(day = 1:25), type = "response")
 )
 
 new_df$gold[25]
