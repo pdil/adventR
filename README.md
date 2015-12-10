@@ -1,6 +1,7 @@
 # adventR
 [Advent of Code](http://www.adventofcode.com) solutions in R
 
+
 * [day 1](https://github.com/pdil/adventR/tree/master/day1)
 * [day 2](https://github.com/pdil/adventR/tree/master/day2)
 * [day 3](https://github.com/pdil/adventR/tree/master/day3)
@@ -26,3 +27,6 @@
 * day 23
 * day 24
 * day 25
+
+\# of completions per day GLM fit:
+<img src="https://raw.githubusercontent.com/pdil/adventR/master/glm.png" width="600px">
