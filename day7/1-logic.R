@@ -1,6 +1,8 @@
 
 library(readr)
 
+start <- Sys.time()
+
 input <- read_lines("input.txt")
 lines <- strsplit(input, split = " ")
 
@@ -80,14 +82,18 @@ while (TRUE) {
           assign(result, 65536 + get(result, mode = "numeric"))
         }
       }, error = function(e) e)
+      
+      input <- input[-index]
     }
   }
 
   
-  if (length(ls()) - 9 >= 339) {
+  if (!is.na(a) && a != 0) {
     print(a)
     break
   }
 }
+
+Sys.time() - start
 
 # 956
