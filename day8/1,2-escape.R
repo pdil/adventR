@@ -3,13 +3,16 @@
 library(readr)
 
 input <- read_lines("input.txt")
-escape_len <- sum(nchar(input))
 
-input <- gsub("(\\[x][0-9a-f][0-9a-f])", "000", x = input)
-input <- gsub("(\\\"|\\\\)", "00", x = input)
+# Part 1
 
-sum(nchar(input)) - escape_len + 2 * length(input)
+sum(nchar(input)) - 
+  sum(sapply(input, function(line) eval(parse(text = sprintf("nchar(iconv(%s, sub = '.'))", line)))))
 
 # 1350
+
+# Part 2
+
+sum(nchar(sapply(input, deparse))) - sum(nchar(input))
 
 # 2085
