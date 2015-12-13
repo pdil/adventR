@@ -42,4 +42,4 @@ for (j in 1:length(comb)) {
 
 max(sums)
 
-# 733
+# 725
