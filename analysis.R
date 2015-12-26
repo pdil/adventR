@@ -4,19 +4,19 @@ library(MASS)
 library(grid)
 
 df <- data.frame(
-  day = 1:11,
+  day = 1:14,
   #gold = c(15791, 11556, 9325, 8159, 6500, 5453, 3327, 2952)
-  gold = c(17413, 12879, 10477, 9181, 7440, 6358, 4072, 3724, 3044, 3247, 2260)
+  #gold = c(17413, 12879, 10477, 9181, 7440, 6358, 4072, 3724, 3044, 3247, 2260)
+  gold = c(19418, 14513, 11917, 10502, 8629, 7478, 4889, 4556, 3875, 4164, 3444, 2925, 2598, 2529)
 )
 
-glm_fit <- glm.nb(gold ~ day, data = df)
-glm_fit
+glm_nb <- glm.nb(gold ~ day, data = df)
 
-coefs <- coef(glm_fit)
+coefs <- coef(glm_nb)
 
 new_df <- data.frame(
   day = 1:25,
-  gold = predict(glm_fit, newdata = data.frame(day = 1:25), type = "response")
+  gold = predict(glm_nb, newdata = data.frame(day = 1:25), type = "response")
 )
 
 new_df$gold[25]
