@@ -1,5 +1,6 @@
 
 library(readr)
+library(plyr)
 library(dplyr)
 
 parse_lines <- function(line) {
