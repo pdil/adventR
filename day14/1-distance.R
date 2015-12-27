@@ -21,4 +21,4 @@ df %>%
            speed * pmin(runtime, end %% (runtime + resttime))) %>%
   filter(distance == max(distance))
 
-# 2596
+# 2640

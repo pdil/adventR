@@ -13,15 +13,18 @@ parse_lines <- function(line) {
 }
 
 df <- read_lines("input.txt") %>% strsplit(" ") %>% ldply(parse_lines)
+df$score <- rep(0, length(df$name))
 
 # distances after 2503 seconds
 end <- 2503
 
-iterate_second <- function(t) {
-  df <- df %>% mutate(distance = speed * runtime * floor(t / (runtime + resttime)) + 
-                        speed * pmin(runtime, t %% (runtime + resttime)))
-  
-  max(df$distance)
+for (t in 1:end) {
+  df <- df %>% transform(distance = speed * runtime * floor(t / (runtime + resttime)) + 
+                               speed * pmin(runtime, t %% (runtime + resttime)))
+  winners <- (df %>% filter(distance == max(distance)))$name
+  df$score[df$name %in% winners] <- df$score[df$name %in% winners] + 1
 }
 
-result <- 1:end %>% ldply(iterate_second)
+max(df$score)
+
+# 1102
