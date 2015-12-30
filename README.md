@@ -15,10 +15,10 @@
 * [day 11](https://github.com/pdil/adventR/tree/master/day11)
 * [day 12](https://github.com/pdil/adventR/tree/master/day12)
 * [day 13](https://github.com/pdil/adventR/tree/master/day13)
-* day 14
-* day 15
-* day 16
-* day 17
+* [day 14](https://github.com/pdil/adventR/tree/master/day14)
+* [day 15](https://github.com/pdil/adventR/tree/master/day15)
+* [day 16](https://github.com/pdil/adventR/tree/master/day16)
+* [day 17](https://github.com/pdil/adventR/tree/master/day17)
 * day 18
 * day 19
 * day 20
